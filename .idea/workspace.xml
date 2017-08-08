@@ -16,23 +16,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="294">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="method#getNodeReference#0;class#Tree#0" expanded="false" />
                 <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
-                <element signature="method#printData#0;class#Tree#0" expanded="false" />
+                <element signature="method#beginSession#0;class#Tree#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeNode.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TreeNode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="71">
@@ -322,7 +321,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Tree.java</url>
-          <line>110</line>
+          <line>149</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
@@ -346,7 +345,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Tree.java</url>
-          <line>46</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
@@ -379,9 +378,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#getNodeReference#0;class#Tree#0" expanded="false" />
             <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
-            <element signature="method#printData#0;class#Tree#0" expanded="false" />
+            <element signature="method#beginSession#0;class#Tree#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -455,6 +453,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
+            <element signature="method#beginSession#0;class#Tree#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -468,20 +479,6 @@
             <element signature="e#2160#2161#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
             <element signature="e#2306#2307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#getNodeReference#0;class#Tree#0" expanded="false" />
-            <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
-            <element signature="method#printData#0;class#Tree#0" expanded="false" />
           </folding>
         </state>
       </provider>

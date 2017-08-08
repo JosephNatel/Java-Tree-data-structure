@@ -15,8 +15,13 @@ public class Tree {
     private int numChildern;
 
 
-
-
+    /**
+     * constructor for the tree class
+     * @param loadFile
+     * String of the tree file location
+     * @throws FileNotFoundException
+     * throws exception if the file is not found
+     */
     public Tree (String loadFile) throws FileNotFoundException{
         try {
             FileInputStream inputStream = new FileInputStream(loadFile);
@@ -31,7 +36,19 @@ public class Tree {
 
     }
 
-
+    /**
+     * this method adds a node to the tree
+     * @param label
+     * label for the new node
+     * @param prompt
+     * the prompt for the new node
+     * @param message
+     * the message for the new node
+     * @param parentLabel
+     * the label of the new node's parent
+     * @return
+     * returns true if the new node was created
+     */
 
     public boolean addNode (String label, String prompt, String message , String parentLabel) {
         TreeNode add = new TreeNode(label, prompt, message);
@@ -45,7 +62,7 @@ public class Tree {
 
         }
         add.getParent().addChild(add, label);
-        /*
+        /* statements used for debugging
         System.out.println("label: " + label);
         System.out.println("prompt: " + prompt);
         System.out.println("message: " + message);
@@ -54,9 +71,15 @@ public class Tree {
         return true;
     }
 
-
+    /**
+     * this method finds and returns a node with a given label
+     * @param label
+     * the label of the node you want to find
+     * @return
+     * returns the node once found
+     */
     public TreeNode getNodeReference (String label) {
-        TreeNode current = new TreeNode();
+        TreeNode current;
         current = root;
 
         if(label == "root"||label == ""){
@@ -73,7 +96,11 @@ public class Tree {
         }
     }
 
-
+    /**
+     * prints the all the nodes in the tree in preorder
+     * @param start
+     * start node is the root node to start printing from
+     */
     public void preOrder (TreeNode start) {
         TreeNode current = new TreeNode();
         if(start == null){
@@ -93,12 +120,24 @@ public class Tree {
 
 
     }
+
+    /**
+     * prints the label, prompt and message of a given node
+     * @param node
+     * the node that you want to print the data from
+     */
     private void printData (TreeNode node){
         System.out.println("label: " + node.getLabel());
         System.out.println("prompt: " + node.getPrompt());
         System.out.println("message: " + node.getMessage());
         System.out.println();
     }
+
+    /**
+     * this method handles input from the user and printing the statement assisated with the help session
+     * @param start
+     * the node that you want to start the help session from
+     */
     public void beginSession (TreeNode start) {
         TreeNode current;
         if(start == null){
@@ -159,68 +198,70 @@ public class Tree {
 
 
     }
+
+    /**
+     * reads data from a file given by the user to create a tree, this method passes the data into addNode to create
+     * a new Node
+     * @param scan
+     * the scanner that has been setup to read the file given by the user in the constructor
+     */
     private void createTree(Scanner scan) {
 
 
-            scan = whitespace(scan);
-            String label = scan.nextLine().trim();
-            scan = whitespace(scan);
-            String prompt = scan.nextLine().trim();
-            scan = whitespace(scan);
-            String message = scan.nextLine().trim();
+        scan = whitespace(scan);
+        String label = scan.nextLine().trim();
+        scan = whitespace(scan);
+        String prompt = scan.nextLine().trim();
+        scan = whitespace(scan);
+        String message = scan.nextLine().trim();
 
-            root = new TreeNode(label, prompt, message);
-            String parentLabel = "root";
-            root.setParent(null);
-            scan = whitespace(scan);
-            String children = scan.nextLine().trim();
+        root = new TreeNode(label, prompt, message);
+        String parentLabel = "root";
+        root.setParent(null);
+        scan = whitespace(scan);
+        String children = scan.nextLine().trim();
 
-            numChildern = Integer.parseInt(children.substring(parentLabel.length() + 1, parentLabel.length() + 2));
-            root.setNumChildern(numChildern);
+        numChildern = Integer.parseInt(children.substring(parentLabel.length() + 1, parentLabel.length() + 2));
+        root.setNumChildern(numChildern);
 
+        while (scan.hasNext()) {
+             for (int i = 0; i < numChildern; i++) {
+                scan = whitespace(scan);
+                label = scan.nextLine().trim();
+                scan = whitespace(scan);
+                prompt = scan.nextLine().trim();
+                scan = whitespace(scan);
+                message = scan.nextLine().trim();
+                addNode(label, prompt, message, parentLabel);
 
-            while (scan.hasNext()) {
-
-                for (int i = 0; i < numChildern; i++) {
-                    scan = whitespace(scan);
-                    label = scan.nextLine().trim();
-                    scan = whitespace(scan);
-                    prompt = scan.nextLine().trim();
-                    scan = whitespace(scan);
-                    message = scan.nextLine().trim();
-                    addNode(label, prompt, message, parentLabel);
-
-                }
-                if (scan.hasNext()) {
-                    scan = whitespace(scan);
-                    String temp = scan.nextLine().trim();
-                    parentLabel = temp.substring(0, temp.length() - 2);
-                    String temp2 = temp.substring(temp.length() - 1, temp.length());
-                    numChildern = Integer.parseInt(temp2);
-                    getNodeReference(parentLabel).setNumChildern(numChildern);
-                } else {
-                    System.out.println("\nTree created successfully!");
-                }
-
-
-            }
-
-
-
-
+             }
+             if (scan.hasNext()) {
+                 scan = whitespace(scan);
+                 String temp = scan.nextLine().trim();
+                 parentLabel = temp.substring(0, temp.length() - 2);
+                 String temp2 = temp.substring(temp.length() - 1, temp.length());
+                 numChildern = Integer.parseInt(temp2);
+                 getNodeReference(parentLabel).setNumChildern(numChildern);
+             }
+             else {
+                System.out.println("\nTree created successfully!");
+             }
+        }
 
     }
 
+    /**
+     * checks if the next line is empty and skips that line if it is
+     * @param scan
+     * the scanner used to keep track where we are reading in the file
+     * @return
+     * returns the scanner ready to read the next line of empty input
+     */
     private Scanner whitespace (Scanner scan) {
         while (scan.findInLine("(?=\\S)") == null){
             scan.nextLine();
         }
         return scan;
     }
-
-
-
-
-
 
 }
