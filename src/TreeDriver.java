@@ -1,27 +1,36 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class TreeDriver {
 
-    private boolean isRunning = false;
-    private char input;
 
-    public static void main (String[] arg) {
+    static char input;
+    static Scanner console = new Scanner(System.in);
+    static String file;
+    static ValidInput validInput = new ValidInput();
 
-        isRunning = true;
-        run();
+    public static void main (String[] arg) throws FileNotFoundException{
 
+        boolean isRunning = true;
+        run(isRunning);
         
 
 
     }
 
 
-    public void run () {
+    private static void run (boolean isRunning) throws FileNotFoundException {
 
         do{
             input = printMainMenu();
             switch (input){
                 case 'L':
+                    System.out.print("\nEnter the file name> ");
+                    file = console.nextLine();
+                    Tree load = new Tree(file);
                     break;
                 case 'H':
+                    System.out.println("\nHelp Session Starting....");
                     break;
                 case 'B':
                     break;
@@ -41,7 +50,7 @@ public class TreeDriver {
 
     }
 
-    public char printMainMenu () {
+    private static char printMainMenu () {
 
         System.out.print("\n" +
                 "    L - Load a Tree.\n" +
@@ -52,6 +61,8 @@ public class TreeDriver {
 
 
         System.out.print("\nChoice> ");
+        input = validInput.checkChar(console.nextLine());
+
         return input; //todo get input from user
 
 
