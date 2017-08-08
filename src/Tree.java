@@ -45,13 +45,13 @@ public class Tree {
 
         }
         add.getParent().addChild(add, label);
-
+        /*
         System.out.println("label: " + label);
         System.out.println("prompt: " + prompt);
         System.out.println("message: " + message);
         System.out.println("parentLabel: " + parentLabel+"\n");
-
-        return true; // todo is created secussefully return true
+        */
+        return true;
     }
 
 
@@ -110,36 +110,48 @@ public class Tree {
         for(int i = 1; i<=current.getNumChildern(); i++){
             System.out.println(i + " " + current.getChild(i).getPrompt());
         }
+        System.out.println("B Go back to the Previous Menu.");
         System.out.println("0 Exit Session.");
         System.out.print("Choice> ");
         Scanner scanConsole = new Scanner(System.in);
-        int input = scanConsole.nextInt();
+        String input = scanConsole.nextLine();
 
-        switch (input){
+        switch (input.charAt(0)){
 
-            case 1:
+            case '1':
                 if(current.getChild(1).getNumChildern() != 0){
                     beginSession(current.getChild(1));
                 }else {
                     System.out.println("\n"+current.getChild(1).getMessage());
                 }
                 break;
-            case 2:
+            case '2':
                 if(current.getChild(2).getNumChildern() != 0){
                     beginSession(current.getChild(2));
                 }else {
                     System.out.println("\n"+current.getChild(2).getMessage());
                 }
                 break;
-            case 3:
+            case '3':
                 if(current.getChild(3).getNumChildern() != 0){
                     beginSession(current.getChild(3));
                 }else {
                     System.out.println("\n"+current.getChild(3).getMessage());
                 }
                 break;
-            case 0:
+            case 'B':
+                if(current == root){
+                    System.out.println("You are already at the first help screen.");
+                    beginSession(current);
+                } else {
+                    beginSession(current.getParent());
+                }
+                break;
+            case '0':
                 System.out.println("Exiting....");
+                break;
+            default:
+                System.out.println("That is not a valid option.");
                 break;
 
 
@@ -148,44 +160,65 @@ public class Tree {
 
     }
     private void createTree(Scanner scan) {
-        String label = scan.nextLine();
-
-        String prompt = scan.nextLine();
-        String message = scan.nextLine();
-        root = new TreeNode(label, prompt, message);
-        String parentLabel = "root";
-        root.setParent(null);
 
 
-        numChildern = Integer.parseInt(scan.nextLine().substring(parentLabel.length()+1, parentLabel.length()+2));
-        root.setNumChildern(numChildern);
+            scan = whitespace(scan);
+            String label = scan.nextLine().trim();
+            scan = whitespace(scan);
+            String prompt = scan.nextLine().trim();
+            scan = whitespace(scan);
+            String message = scan.nextLine().trim();
+
+            root = new TreeNode(label, prompt, message);
+            String parentLabel = "root";
+            root.setParent(null);
+            scan = whitespace(scan);
+            String children = scan.nextLine().trim();
+
+            numChildern = Integer.parseInt(children.substring(parentLabel.length() + 1, parentLabel.length() + 2));
+            root.setNumChildern(numChildern);
 
 
-        while(scan.hasNext()){
+            while (scan.hasNext()) {
 
-            for(int i = 0; i<numChildern; i++) {
-                addNode(scan.nextLine(), scan.nextLine(), scan.nextLine(), parentLabel);
+                for (int i = 0; i < numChildern; i++) {
+                    scan = whitespace(scan);
+                    label = scan.nextLine().trim();
+                    scan = whitespace(scan);
+                    prompt = scan.nextLine().trim();
+                    scan = whitespace(scan);
+                    message = scan.nextLine().trim();
+                    addNode(label, prompt, message, parentLabel);
+
+                }
+                if (scan.hasNext()) {
+                    scan = whitespace(scan);
+                    String temp = scan.nextLine().trim();
+                    parentLabel = temp.substring(0, temp.length() - 2);
+                    String temp2 = temp.substring(temp.length() - 1, temp.length());
+                    numChildern = Integer.parseInt(temp2);
+                    getNodeReference(parentLabel).setNumChildern(numChildern);
+                } else {
+                    System.out.println("\nTree created successfully!");
+                }
+
 
             }
-            if(scan.hasNext()) {
-                String temp = scan.nextLine();
-                parentLabel = temp.substring(0, temp.length() - 2);
-                String temp2 = temp.substring(temp.length() - 1, temp.length());
-                numChildern = Integer.parseInt(temp2);
-                getNodeReference(parentLabel).setNumChildern(numChildern);
-            }else{
-                System.out.println("\nFile has been read.");
-            }
 
-
-
-
-        }
 
 
 
 
     }
+
+    private Scanner whitespace (Scanner scan) {
+        while (scan.findInLine("(?=\\S)") == null){
+            scan.nextLine();
+        }
+        return scan;
+    }
+
+
 
 
 

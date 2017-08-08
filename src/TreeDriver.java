@@ -37,10 +37,10 @@ public class TreeDriver {
                 case 'H':
                     System.out.println("\nHelp Session Starting....");
                     load.beginSession(null);
+                    System.out.println("\nThank you for using this automated help service!");
 
                     break;
-                case 'B':
-                    break;
+
                 case 'T':
                     System.out.println("\nTraversing the tree in preorder: ");
                     if(load == null){
@@ -50,7 +50,7 @@ public class TreeDriver {
                     }
                     break;
                 case 'Q':
-                    System.out.println("Thank you for using our automated help services!");
+                    System.out.println("\nThank you for using our automated help services!");
                     isRunning = false;
                     break;
                 default:
@@ -68,7 +68,6 @@ public class TreeDriver {
         System.out.print("\n" +
                 "    L - Load a Tree.\n" +
                 "    H - Begin a Help Session.\n" +
-                "    B - Go Back. \n" +
                 "    T - Traverse the Tree in preorder. \n" +
                 "    Q - Exit the program.\n");
 
