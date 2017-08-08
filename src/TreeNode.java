@@ -1,4 +1,6 @@
-import sun.security.ssl.Debug;
+/**
+ * Created by Joseph Natel 108470761 CSE 214 HW4
+ */
 
 public class TreeNode {
 
@@ -38,6 +40,7 @@ public class TreeNode {
     public void setLabel(String label) {
         this.label = label;
     }
+
 
     public void setMessage(String message) {
         this.message = message;
@@ -85,6 +88,7 @@ public class TreeNode {
             String temp = childLabel.substring(getLabel().length()+1);
 
             int counter = Integer.parseInt(temp);
+
             childern[counter-1] = child;
         }
 

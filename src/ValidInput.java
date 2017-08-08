@@ -1,5 +1,5 @@
 /**
- * Created by Joseph Natel 108470761 CSE 214 HW2 on 7/11/2017.
+ * Created by Joseph Natel 108470761 CSE 214 HW4 on 7/11/2017.
  */
 
 public class ValidInput {
