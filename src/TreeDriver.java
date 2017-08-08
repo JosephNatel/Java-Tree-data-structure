@@ -14,6 +14,11 @@ public class TreeDriver {
     static ValidInput validInput = new ValidInput();
     static Tree load;
 
+    /**
+     * Start of execution
+     * @param arg
+     * @throws FileNotFoundException
+     */
     public static void main (String[] arg) throws FileNotFoundException{
 
         boolean isRunning = true;
@@ -23,7 +28,13 @@ public class TreeDriver {
 
     }
 
-
+    /**
+     * this method has an infinite loop for as long as the user is running the program. It also calls the method the user
+     * request
+     * @param isRunning
+     * a boolean to tell if the program is running
+     * @throws FileNotFoundException
+     */
     private static void run (boolean isRunning) throws FileNotFoundException {
 
         do{
@@ -63,6 +74,11 @@ public class TreeDriver {
 
     }
 
+    /**
+     * a method to print the main menu and the accept input from the user
+     * @return
+     * returns the input from the user
+     */
     private static char printMainMenu () {
 
         System.out.print("\n" +
@@ -75,7 +91,7 @@ public class TreeDriver {
         System.out.print("\nChoice> ");
         input = validInput.checkChar(console.nextLine());
 
-        return input; //todo get input from user
+        return input;
 
 
     }

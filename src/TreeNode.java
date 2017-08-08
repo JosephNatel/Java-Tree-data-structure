@@ -13,10 +13,20 @@ public class TreeNode {
     private int numChildern;
     private TreeNode childern[];
 
-
+    /**
+     * empty constructor for a TreeNode
+     */
     public TreeNode () {
 
     }
+
+    /**
+     * a non-empty full constructor for TreeNode
+     * @param label
+     * the label for the TreeNode
+     * @param prompt
+     * @param message
+     */
     public TreeNode (String label, String prompt, String message) {
         this.prompt = prompt;
         this.label = label;
