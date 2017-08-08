@@ -153,9 +153,9 @@ public class Tree {
         System.out.println("0 Exit Session.");
         System.out.print("Choice> ");
         Scanner scanConsole = new Scanner(System.in);
-        String input = scanConsole.nextLine();
+        char input = validInput.checkCharLoose(scanConsole.nextLine());
 
-        switch (input.charAt(0)){
+        switch (input){
 
             case '1':
                 if(current.getChild(1).getNumChildern() != 0){

@@ -17,16 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="258">
+              <caret line="157" column="23" lean-forward="true" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;method#Tree#0;class#Tree#0" expanded="false" />
+                <element signature="method#Tree#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#addNode#0;class#Tree#0" expanded="false" />
+                <element signature="method#addNode#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#getNodeReference#0;class#Tree#0" expanded="false" />
+                <element signature="method#getNodeReference#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#preOrder#0;class#Tree#0" expanded="false" />
                 <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
-                <element signature="method#beginSession#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#printData#0;class#Tree#0" expanded="false" />
+                <element signature="method#printData#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#beginSession#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#createTree#0;class#Tree#0" expanded="false" />
+                <element signature="method#createTree#0;class#Tree#0" expanded="false" />
+                <element signature="docComment;method#whitespace#0;class#Tree#0" expanded="false" />
+                <element signature="method#whitespace#0;class#Tree#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -35,7 +48,7 @@
       <file leaf-file-name="TreeNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="525">
               <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding>
                 <element signature="e#1068#1069#0" expanded="true" />
@@ -54,14 +67,14 @@
       <file leaf-file-name="ValidInput.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ValidInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+            <state relative-caret-position="151">
+              <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeDriver.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TreeDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TreeDriver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
@@ -103,10 +116,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ValidInput.java" />
-        <option value="$PROJECT_DIR$/src/Tree.java" />
         <option value="$PROJECT_DIR$/src/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/TreeDriver.java" />
+        <option value="$PROJECT_DIR$/src/ValidInput.java" />
+        <option value="$PROJECT_DIR$/src/Tree.java" />
       </list>
     </option>
   </component>
@@ -284,7 +297,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -294,7 +306,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -350,8 +362,16 @@
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Tree.java</url>
+          <line>52</line>
+          <properties class="Tree" method="addNode">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="59" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -379,8 +399,21 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Tree#0;class#Tree#0" expanded="false" />
+            <element signature="method#Tree#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#addNode#0;class#Tree#0" expanded="false" />
+            <element signature="method#addNode#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#getNodeReference#0;class#Tree#0" expanded="false" />
+            <element signature="method#getNodeReference#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#preOrder#0;class#Tree#0" expanded="false" />
             <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
-            <element signature="method#beginSession#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#printData#0;class#Tree#0" expanded="false" />
+            <element signature="method#printData#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#beginSession#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#createTree#0;class#Tree#0" expanded="false" />
+            <element signature="method#createTree#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#whitespace#0;class#Tree#0" expanded="false" />
+            <element signature="method#whitespace#0;class#Tree#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -436,30 +469,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ValidInput.java">
+    <entry file="file://$PROJECT_DIR$/src/TreeDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="168">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
-            <element signature="method#beginSession#0;class#Tree#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TreeNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="525">
           <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding>
             <element signature="e#1068#1069#0" expanded="true" />
@@ -474,12 +496,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TreeDriver.java">
+    <entry file="file://$PROJECT_DIR$/src/ValidInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="151">
+          <caret line="189" column="30" lean-forward="false" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="157" column="23" lean-forward="true" selection-start-line="157" selection-start-column="23" selection-end-line="157" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Tree#0;class#Tree#0" expanded="false" />
+            <element signature="method#Tree#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#addNode#0;class#Tree#0" expanded="false" />
+            <element signature="method#addNode#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#getNodeReference#0;class#Tree#0" expanded="false" />
+            <element signature="method#getNodeReference#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#preOrder#0;class#Tree#0" expanded="false" />
+            <element signature="method#preOrder#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#printData#0;class#Tree#0" expanded="false" />
+            <element signature="method#printData#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#beginSession#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#createTree#0;class#Tree#0" expanded="false" />
+            <element signature="method#createTree#0;class#Tree#0" expanded="false" />
+            <element signature="docComment;method#whitespace#0;class#Tree#0" expanded="false" />
+            <element signature="method#whitespace#0;class#Tree#0" expanded="false" />
           </folding>
         </state>
       </provider>

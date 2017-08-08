@@ -187,6 +187,19 @@ public class ValidInput {
         return input;
 
     }
+    public char checkCharLoose(String input) throws IllegalArgumentException{
+
+
+        if(input.isEmpty()||Character.isWhitespace(input.charAt(0))) {
+            throw new RuntimeException("Input can not be a whitespace character or empty");
+        }
+        if(Character.isDigit(input.charAt(0))){
+            return input.charAt(0);
+        }else {
+            return Character.toUpperCase(input.charAt(0));
+        }
+
+    }
 
 
 
