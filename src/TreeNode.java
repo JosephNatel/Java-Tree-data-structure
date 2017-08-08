@@ -17,7 +17,7 @@ public class TreeNode {
     public TreeNode () {
 
     }
-    public TreeNode (String label, String message, String prompt) {
+    public TreeNode (String label, String prompt, String message) {
         this.prompt = prompt;
         this.label = label;
         this.message = message;

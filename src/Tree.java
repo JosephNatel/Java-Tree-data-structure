@@ -106,39 +106,39 @@ public class Tree {
         }
 
         current = start;
-        System.out.println(current.getMessage());
+        System.out.println("\n"+current.getMessage());
         for(int i = 1; i<=current.getNumChildern(); i++){
             System.out.println(i + " " + current.getChild(i).getPrompt());
         }
         System.out.println("0 Exit Session.");
         System.out.print("Choice> ");
         Scanner scanConsole = new Scanner(System.in);
-        char input = validInput.checkChar(scanConsole.nextLine());
+        int input = scanConsole.nextInt();
 
         switch (input){
 
-            case '1':
+            case 1:
                 if(current.getChild(1).getNumChildern() != 0){
                     beginSession(current.getChild(1));
                 }else {
                     System.out.println("\n"+current.getChild(1).getMessage());
                 }
                 break;
-            case '2':
+            case 2:
                 if(current.getChild(2).getNumChildern() != 0){
                     beginSession(current.getChild(2));
                 }else {
                     System.out.println("\n"+current.getChild(2).getMessage());
                 }
                 break;
-            case '3':
+            case 3:
                 if(current.getChild(3).getNumChildern() != 0){
                     beginSession(current.getChild(3));
                 }else {
                     System.out.println("\n"+current.getChild(3).getMessage());
                 }
                 break;
-            case '0':
+            case 0:
                 System.out.println("Exiting....");
                 break;
 
@@ -148,10 +148,11 @@ public class Tree {
 
     }
     private void createTree(Scanner scan) {
-        String label;
-        String message;
-        String prompt;
-        root = new TreeNode(scan.nextLine(), scan.nextLine(), scan.nextLine());
+        String label = scan.nextLine();
+
+        String prompt = scan.nextLine();
+        String message = scan.nextLine();
+        root = new TreeNode(label, prompt, message);
         String parentLabel = "root";
         root.setParent(null);
 
