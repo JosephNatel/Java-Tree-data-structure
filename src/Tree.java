@@ -31,6 +31,17 @@ public class Tree {
 
     public boolean addNode (String label, String prompt, String message , String parentLabel) {
         TreeNode add = new TreeNode(label, prompt, message);
+        add.setParentLabel(parentLabel);
+
+        if(parentLabel == "root"){
+            add.setParent(root);
+
+        }else {
+            add.setParent(getNodeReference(parentLabel));
+
+        }
+        add.getParent().addChild(add, label);
+
         System.out.println("label: " + label);
         System.out.println("prompt: " + prompt);
         System.out.println("message: " + message);
@@ -40,9 +51,41 @@ public class Tree {
     }
 
 
-//    public TreeNode getNodeReference (String label) {
-//        return
-//    }
+    public TreeNode getNodeReference (String label) {
+        TreeNode current = new TreeNode();
+        current = root;
+        int counter = 1;
+        boolean isFound = false;
+        if(label == "root"){
+            return root;
+        }
+
+        while (!isFound) {
+            if (current.getLabel().equalsIgnoreCase(label)) {
+
+                return current;
+            }
+            for (int i = 1; i <= current.getNumChildern(); i++) {
+                if (current.getChild(i).getLabel().equalsIgnoreCase(label)) {
+                    return current.getChild(i);
+                }
+            }
+
+            if (current.getNumChildern() >= counter) {
+                current = current.getChild(counter);
+                counter++;
+            } else {
+                counter = 1;
+                if (current.getChild(counter).getNumChildern() != 0) {
+                    current = current.getChild(counter);
+                } else {
+                    counter++;
+                }
+            }
+        }
+        return null;
+    }
+
 
     public void preOrder () {
 
@@ -53,8 +96,12 @@ public class Tree {
     private void createTree(Scanner scan) {
         root = new TreeNode(scan.nextLine(), scan.nextLine(), scan.nextLine());
         String parentLabel = "root";
+        root.setParent(null);
+
 
         numChildern = Integer.parseInt(scan.nextLine().substring(parentLabel.length()+1, parentLabel.length()+2));
+        root.setNumChildern(numChildern);
+
 
         while(scan.hasNext()){
 
@@ -67,6 +114,7 @@ public class Tree {
                 parentLabel = temp.substring(0, temp.length() - 2);
                 String temp2 = temp.substring(temp.length() - 1, temp.length());
                 numChildern = Integer.parseInt(temp2);
+                getNodeReference(parentLabel).setNumChildern(numChildern);
             }else{
                 System.out.println("\nFile has been read.");
             }
