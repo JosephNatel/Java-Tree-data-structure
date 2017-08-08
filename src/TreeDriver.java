@@ -35,6 +35,7 @@ public class TreeDriver {
                 case 'B':
                     break;
                 case 'T':
+                    System.out.println("\nTraversing the tree in preorder: ");
                     break;
                 case 'Q':
                     System.out.println("Thank you for using our automated help services!");

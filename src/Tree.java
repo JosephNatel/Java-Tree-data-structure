@@ -62,10 +62,14 @@ public class Tree {
                 addNode(scan.nextLine(), scan.nextLine(), scan.nextLine(), parentLabel);
 
             }
-            String temp = scan.nextLine();
-            parentLabel = temp.substring(0,temp.length()-2);
-            String temp2 = temp.substring(temp.length()-1, temp.length());
-            numChildern = Integer.parseInt(temp2);
+            if(scan.hasNext()) {
+                String temp = scan.nextLine();
+                parentLabel = temp.substring(0, temp.length() - 2);
+                String temp2 = temp.substring(temp.length() - 1, temp.length());
+                numChildern = Integer.parseInt(temp2);
+            }else{
+                System.out.println("\nFile has been read.");
+            }
 
 
 
